@@ -1,0 +1,246 @@
+.main-container-gllary {
+    padding-left: 4.08vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    min-height: 70vh;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-template-rows: repeat(3, 21vh); */
+    /* grid-gap: 10px; */
+    /* height: 70vh;
+    width: 100vw; */
+    padding-bottom: 10px;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: #e3e3e3;
+}
+
+
+.pics-container {
+    padding-left: 4.08vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-template-rows: repeat(3, 21vh); */
+    /* grid-gap: 10px; */
+    min-height: 70vh;
+    /* width: 100vw; */
+    /* */
+    padding-bottom: 10px;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: #e3e3e3;
+}
+
+
+.resize3 {
+    cursor: pointer;
+    width: 140px;
+    height: 140px;
+    border-radius: 20%;
+    filter: grayscale(50%);
+    transition: filter 0.25s;
+    transition: all 0.2s ease;
+
+}
+
+@media (max-width: 740px) {
+
+    .resize3 {
+        width: 280px;
+        height: 280px;
+
+
+    }
+
+
+
+}
+
+@media (max-width: 600px) {
+
+    .resize3 {
+        width: 400px;
+        height: 400px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+.resize3:hover {
+    filter: grayscale(0%);
+    box-shadow: 2px 3px 1px 1px #e9ecef;
+    transform: scale(1.1);
+}
+
+
+.pics-row-1 {
+
+    display: flex;
+
+}
+
+.pics-row-2 {
+
+    display: flex;
+}
+
+
+
+
+.sticker-icon {
+    cursor: pointer;
+    max-width: 5vw;
+    height: 8.5vh;
+    transition: 0.3s ease-in-out;
+
+    margin: 2px;
+}
+
+
+.sticker-icon:hover {
+
+    transform: rotate(-15deg) scale(1.2);
+}
+
+
+.btn-conatiner {
+    width: 31vw;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+
+.sticker-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31vw;
+    height: 14vh;
+    border-radius: 15px;
+    border: none;
+    border-top-style: hidden;
+    background-color: white;
+
+}
+
+
+.pokemons {
+    display: block;
+}
+
+.emojis {
+    display: none;
+
+}
+
+
+
+
+@media (max-width: 740px) {
+    .main-container-editor {
+        display: none;
+        flex-direction: column;
+        min-height: 100vh;
+        min-width: 100vw;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .right-side {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .button-line1 {
+        flex-direction: row;
+        padding-top: 1vh;
+        width: 100vw;
+
+    }
+
+    .button-line2 {
+        flex-direction: row;
+        padding-top: 1vh;
+        width: 100vw;
+
+    }
+
+    .button-line3 {
+        flex-direction: row;
+        padding-top: 1vh;
+        width: 100vw;
+
+    }
+
+    .button-line4 {
+        flex-direction: row;
+        padding-top: 1vh;
+        width: 100vw;
+
+    }
+
+    .sticker-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 31vw;
+        height: 22vh;
+        border-radius: 15px;
+        border: none;
+        border-top-style: hidden;
+        background-color: white;
+        margin-bottom: 2vh;
+
+    }
+
+    .sticker-icon {
+        cursor: pointer;
+        max-width: 8vw;
+        height: 8.5vh;
+        transition: 0.3s ease-in-out;
+
+        margin: 2px;
+    }
+
+    input {
+        margin-top: 2vh;
+    }
+
+
+    .left-side {
+        background-color: #e3e3e3;
+        width: 100%;
+        height: 100%;
+
+        padding-right: 5vw;
+
+
+    }
+
+}

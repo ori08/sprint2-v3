@@ -1,0 +1,52 @@
+.btn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    background-color: white;
+    transition: all 0.2s ease;
+    position: relative;
+    margin-left: 0.2vw;
+
+}
+
+
+.fb-btn {
+    cursor: pointer;
+    border: 0;
+    width: 10vw;
+    border-radius: 6px;
+    background-color: white;
+    transition: all 0.2s ease;
+    position: relative;
+    margin-left: 0.2vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+}
+
+.btn.arrow {
+    background-color: white;
+}
+
+
+.btn:hover {
+    box-shadow: 2px 3px 1px 1px #e9ecef;
+    transform: scale(1.1);
+}
+
+.btnIcons {
+    max-height: 30px;
+    max-width: 30px;
+    margin: 5px;
+}
+
+
+.pad-left {
+    padding-left: 15vw;
+}
+
+.btn.painter {
+    background-image: url(../icons-pics/2.png);
+    background-position: center;
+    background-size: cover;
+}

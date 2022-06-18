@@ -1,0 +1,27 @@
+.flex {
+    display: flex;
+
+}
+
+.flex.align-center {
+    align-items: center;
+
+}
+
+
+
+.display-none {
+    display: none;
+
+}
+
+
+
+.min-widgth {
+    width: 0px;
+}
+
+
+/* .pad-top-1vh {
+    padding-top: 3vh;
+} */

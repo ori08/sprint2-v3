@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>canvas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/helpers.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-container-gallary.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+
+<body onload="init();">
+
+
+    <header class="header-container ">
+
+        <!-- <div class="header-body"> -->
+        <img class="logo flex" src="font-pics/1.png" alt="">
+
+        <div class="nav-link">
+            <a onclick="goToGalleryPage()" class="nav-fonts" href="#">Gallery</a>
+            <a class="nav-fonts" href="mem.html">Meme</a>
+        </div>
+
+
+    </header>
+
+
+    <div class="main-container-gllary">
+
+
+
+    </div>
+
+
+
+
+
+    <div class=" main-container-editor">
+
+        <div class="left-side">
+
+            <canvas class="left-side" id="my-canvas" height="300" width="300" onclick="draw(event)"></canvas>
+        </div>
+
+
+        <div class="right-side">
+
+            <div class="btn-conatiner">
+
+
+                <form onsubmit="onSetSettings(event)">
+                    <input class="placeholder" type="text" name="text" placeholder="......">
+                </form>
+
+
+
+
+                <div class="button-line1">
+
+                    <button class="btn " onclick="remove()"><img class="btnIcons" src="icons-pics/trash.png"
+                            alt=""></button>
+
+                    <button class="btn "> <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg">
+                            <img class="btnIcons" src="icons-pics/download.png" alt=""></a></button>
+
+
+                    <button class="btn " onclick="saveMeme()"><img class="btnIcons" src="icons-pics/save.png"
+                            alt=""></button>
+                    <button class="btn " onclick="switchMode()"><img class="btnIcons switch " src="icons-pics/off.png"
+                            alt=""></button>
+
+
+
+                </div>
+
+
+                <div class="button-line2">
+                    <button class="btn arrow grid-row-3 cloum-2 " onclick="switchLines()"><img class="btnIcons"
+                            src="icons-pics/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
+
+
+
+
+
+                    <button class="btn grid-row-3 cloum-3 " onclick="fontIncarseSize()"><img class="btnIcons"
+                            src="icons-pics/increase font - icon.png" alt=""></button>
+
+                    <button class="btn grid-row-3 cloum-4 " onclick="fontDecraseSize()"><img class="btnIcons"
+                            src="icons-pics/decrease font - icon.png" alt=""></button>
+
+                    <button class="btn grid-row-2 cloum-1 " onclick="fontChange()"><img class="btnIcons"
+                            src="icons-pics/text stroke.png" alt=""></button>
+
+
+
+
+                </div>
+
+
+                <div class="button-line3">
+
+
+
+                    <button class="btn arrow grid-row-3 cloum-2 " onclick="moveDown()"><img class="btnIcons"
+                            src="icons-pics/arrow-down.png" alt=""></button>
+
+                    <button class="btn arrow  grid-row-3 cloum-1 " onclick="moveUp()"><img class="btnIcons"
+                            src="icons-pics/arrow-up.png" alt=""></button>
+
+                    <button class="btn arrow  grid-row-3 cloum-3 " onclick="moveLeft()">
+                        <img class="btnIcons" src="icons-pics/arrow-left.png" alt=""></button>
+
+                    <button class="btn arrow  grid-row-3 cloum-4 " onclick="moveRight()"><img class="btnIcons"
+                            src="icons-pics/arrow-right.png" alt=""></button>
+
+
+
+
+
+                </div>
+
+
+                <div class="button-line4">
+
+                    <button class="btn " onclick="setPokemons()"><img class="btnIcons switch "
+                            src="icons-pics/pokemons.png" alt=""></button>
+
+
+                    <button class="btn " onclick="setEmogis()"><img class="btnIcons switch "
+                            src="icons-pics/emoji-stickers.png" alt=""></button>
+
+                    <button class="btn" onclick="filterPic()"><img class="btnIcons" src="icons-pics/Filtter.png"
+                            alt=""></button>
+
+
+                    <button class="btn" onclick="aplayColorBtn()"><input oninput="changeColor(this.value)"
+                            class="color-input shapeColor  display-none" type="color" name="shape-Color"
+                            value="#ff0000"><img class="btnIcons flex" src="icons-pics/paint-board-and-brush.png"
+                            alt=""></button>
+
+
+
+
+                </div>
+
+                <img class="fb-btn" src="icons-pics/facebook-share.png" alt="">
+
+
+
+                <div class="sticker-container">
+                    <div class="pokemons">
+                        <img class="sticker-icon" onclick="addSticker(1)" src="stickers/1.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(2)" src="stickers/2.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(3)" src="stickers/3.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(4)" src="stickers/4.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(5)" src="stickers/5.png" alt="">
+                    </div>
+                    <div class="emojis">
+                        <img class="sticker-icon" onclick="addSticker(6)" src="stickers/6.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(7)" src="stickers/7.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(8)" src="stickers/8.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(9)" src="stickers/9.png" alt="">
+                        <img class="sticker-icon" onclick="addSticker(10)" src="stickers/10.png" alt="">
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-conatiner">
+
+
+            <img class="logo-footer" src="font-pics/1.png" alt="">
+            <p>all rights reserved 2019</p>
+
+
+
+
+        </div>
+
+
+    </footer>
+
+
+
+
+
+    <!-- <img src="/img/1.jpg" alt=""> -->
+    <script src="main.js"></script>
+    <script src="meme-services.js"></script>
+    <script src="storage.js"></script>
+    <script src="mem-display.js"></script>
+    <script src="gStickers.js"></script>
+
+</body>
+
+</html>
